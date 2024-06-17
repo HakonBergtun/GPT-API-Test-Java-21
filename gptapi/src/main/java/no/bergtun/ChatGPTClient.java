@@ -9,5 +9,5 @@ import io.micronaut.http.client.annotation.Client;
 @Header(name = "Authorization", value = "Bearer ${chatGPT.apikey}")
 public interface ChatGPTClient {
     @Post("/chat/completions")
-    String getResponse(@Body ChatGPTRequest request);
+    ChatGPTResponse getResponse(@Body ChatGPTRequest request);
 }

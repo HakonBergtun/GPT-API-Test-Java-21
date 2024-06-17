@@ -10,7 +10,7 @@ public record ChatGPTRequest (
         String model,
         List <Message> messages
 ){
-    static ChatGPTRequest newFrom (String message) {
-        return new ChatGPTRequest("gpt-3.5-turbo",List.of(new Message(message, "user")));
+    static ChatGPTRequest newFrom (List<Message> messages) {
+        return new ChatGPTRequest("gpt-3.5-turbo", messages);
     }
 }
