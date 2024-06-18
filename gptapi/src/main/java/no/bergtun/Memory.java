@@ -11,7 +11,7 @@ public class Memory {
 
     public Memory () {
         this.history= new ArrayList<>();
-        this.history.add(new Message("Always respond angry", "system"));
+        this.history.add(new Message("Always be supportive and explain everything like I was five years old", "system"));
     }
 
    void addHistory(Message message){
@@ -27,12 +27,11 @@ public class Memory {
     }
 
     public void renameSystemMessage(String newSystemMessage) {
-       // find and replace system message with new system message
-       for (int i = 0; i < history.size(); i++) {
+        // find and replace system message with new system message
+        for (int i = 0; i < history.size(); i++) {
             if (history.get(i).role().equals("system")) {
-                history.set(i, new Message(newSystemMessage, "system"));
+                history.set(i, new Message("system", newSystemMessage));
             }
         }
     }
-
 }
