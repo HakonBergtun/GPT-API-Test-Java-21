@@ -1,6 +1,5 @@
 package no.bergtun;
 
-import io.micronaut.http.annotation.Get;
 import io.micronaut.serde.annotation.Serdeable;
 
 import java.util.List;
