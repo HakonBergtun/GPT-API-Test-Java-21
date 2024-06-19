@@ -11,7 +11,7 @@ public class Memory {
 
     public Memory () {
         this.history= new ArrayList<>();
-        this.history.add(new Message("Always be supportive and explain everything like I was five years old", "system"));
+        this.history.add(new Message("Always be supportive and explain everything like I am five years old", "system"));
     }
 
    void addHistory(Message message){
